@@ -1,0 +1,1743 @@
+2015/11/09 22:17:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.awd' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `awd`.
+2015/11/09 22:17:02 [error] [exception.CDbException] exception 'CDbException' with message 'The table "awd" for active record class "Comment" cannot be found in the database.' in C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Comment))
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(1425): CActiveRecord->getTableSchema()
+#3 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(1416): CStatElement->queryOneMany()
+#4 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(455): CStatElement->query()
+#5 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#6 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1361): CActiveFinder->query(Object(CDbCriteria), true)
+#7 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#8 C:\OpenServer\domains\yii\framework\web\CActiveDataProvider.php(199): CActiveRecord->findAll(Object(CDbCriteria))
+#9 C:\OpenServer\domains\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#10 C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#11 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#12 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#13 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#14 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(9): CBaseController->widget('zii.widgets.CLi...', Array)
+#15 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#16 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#18 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#19 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(137): CController->render('index', Array)
+#20 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#21 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#30 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#31 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#32 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#33 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 22:17:31 [error] [exception.CDbException] exception 'CDbException' with message 'The relation "commentCount" in active record class "Post" is specified with an invalid foreign key "post_id". There is no such column in the table "les_comments".' in C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php:1439
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(1416): CStatElement->queryOneMany()
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(455): CStatElement->query()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#3 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1361): CActiveFinder->query(Object(CDbCriteria), true)
+#4 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\OpenServer\domains\yii\framework\web\CActiveDataProvider.php(199): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\OpenServer\domains\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#10 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(9): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#13 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#14 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#15 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(137): CController->render('index', Array)
+#17 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#18 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#27 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#28 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#30 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 22:19:28 [error] [exception.CDbException] exception 'CDbException' with message 'The relation "commentCount" in active record class "Post" is specified with an invalid foreign key "post_id". There is no such column in the table "les_comments".' in C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php:1439
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(1416): CStatElement->queryOneMany()
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(455): CStatElement->query()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#3 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1361): CActiveFinder->query(Object(CDbCriteria), true)
+#4 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\OpenServer\domains\yii\framework\web\CActiveDataProvider.php(199): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\OpenServer\domains\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#10 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(9): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#13 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#14 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#15 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(137): CController->render('index', Array)
+#17 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#18 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#27 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#28 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#30 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 22:19:57 [error] [exception.CDbException] exception 'CDbException' with message 'The relation "commentCount" in active record class "Post" is specified with an invalid foreign key "post_id". There is no such column in the table "les_comments".' in C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php:1439
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(1416): CStatElement->queryOneMany()
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(455): CStatElement->query()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#3 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1361): CActiveFinder->query(Object(CDbCriteria), true)
+#4 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\OpenServer\domains\yii\framework\web\CActiveDataProvider.php(199): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\OpenServer\domains\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#10 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(9): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#13 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#14 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#15 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(137): CController->render('index', Array)
+#17 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#18 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#27 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#28 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#30 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 22:20:50 [error] [exception.CDbException] exception 'CDbException' with message 'The relation "commentCount" in active record class "Post" is specified with an invalid foreign key "post_id". There is no such column in the table "les_comments".' in C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php:1439
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(1416): CStatElement->queryOneMany()
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(455): CStatElement->query()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#3 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1361): CActiveFinder->query(Object(CDbCriteria), true)
+#4 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\OpenServer\domains\yii\framework\web\CActiveDataProvider.php(199): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\OpenServer\domains\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#8 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#10 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(9): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#13 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#14 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#15 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(137): CController->render('index', Array)
+#17 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#18 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#27 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#28 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#29 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#30 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 22:21:30 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `les_comments` `t` WHERE all LIMIT 1.
+2015/11/09 22:21:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all LIMIT 1' at line 1' in C:\OpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\OpenServer\domains\yii\demos\blog\protected\models\Comment.php(38): CActiveRecord->find('all', Array)
+#4 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(120): Comment->deleteComments()
+#5 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#16 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#18 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 22:22:24 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `les_comments` `t` WHERE all LIMIT 1.
+2015/11/09 22:22:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all LIMIT 1' at line 1' in C:\OpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\OpenServer\domains\yii\demos\blog\protected\models\Comment.php(38): CActiveRecord->find('all', Array)
+#4 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(120): Comment->deleteComments()
+#5 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#16 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#18 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 22:22:32 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `les_comments` `t` WHERE all LIMIT 1.
+2015/11/09 22:22:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all LIMIT 1' at line 1' in C:\OpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\OpenServer\domains\yii\demos\blog\protected\models\Comment.php(38): CActiveRecord->find('all', Array)
+#4 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(120): Comment->deleteComments()
+#5 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#16 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#18 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 22:22:37 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `les_comments` `t` WHERE all LIMIT 1.
+2015/11/09 22:22:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'all LIMIT 1' at line 1' in C:\OpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\OpenServer\domains\yii\demos\blog\protected\models\Comment.php(38): CActiveRecord->find('all')
+#4 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(120): Comment->deleteComments()
+#5 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#16 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#18 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 22:23:30 [error] [exception.CException] exception 'CException' with message 'Property "Comment.tags" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('tags')
+#1 C:\OpenServer\domains\yii\demos\blog\protected\models\Comment.php(40): CActiveRecord->__get('tags')
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(120): Comment->deleteComments()
+#3 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:25:18 [error] [php] Object of class Comment could not be converted to string (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:166)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/09 23:31:27 [error] [php] implode(): Invalid arguments passed (C:\OpenServer\domains\yii\demos\blog\protected\views\post\_view.php:20)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#1 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#2 C:\OpenServer\domains\yii\framework\web\CController.php(782): PostController->renderPartial()
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): PostController->render()
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/09 23:31:53 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#1 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(9): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): CController->render('index', Array)
+#9 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:32:39 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#1 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(10): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): CController->render('index', Array)
+#9 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:34:28 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#1 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(10): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): CController->render('index', Array)
+#9 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:35:44 [error] [php] implode(): Invalid arguments passed (C:\OpenServer\domains\yii\demos\blog\protected\views\post\_view.php:20)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#1 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#2 C:\OpenServer\domains\yii\demos\blog\protected\views\post\view.php(10): PostController->renderPartial()
+#3 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(782): PostController->renderPartial()
+#7 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): PostController->render()
+#8 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#14 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#17 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/09 23:35:52 [error] [php] implode(): Invalid arguments passed (C:\OpenServer\domains\yii\demos\blog\protected\views\post\_view.php:20)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#1 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#2 C:\OpenServer\domains\yii\framework\web\CController.php(782): PostController->renderPartial()
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): PostController->render()
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/09 23:36:26 [error] [php] implode(): Invalid arguments passed (C:\OpenServer\domains\yii\demos\blog\protected\views\post\_view.php:20)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#1 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#2 C:\OpenServer\domains\yii\demos\blog\protected\views\post\view.php(11): PostController->renderPartial()
+#3 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(782): PostController->renderPartial()
+#7 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): PostController->render()
+#8 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#14 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#17 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/09 23:36:37 [error] [php] implode(): Invalid arguments passed (C:\OpenServer\domains\yii\demos\blog\protected\views\post\_view.php:21)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#1 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#2 C:\OpenServer\domains\yii\demos\blog\protected\views\post\view.php(11): PostController->renderPartial()
+#3 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(782): PostController->renderPartial()
+#7 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): PostController->render()
+#8 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#14 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#17 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/09 23:36:45 [error] [php] implode(): Invalid arguments passed (C:\OpenServer\domains\yii\demos\blog\protected\views\post\_view.php:21)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#1 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#2 C:\OpenServer\domains\yii\demos\blog\protected\views\post\view.php(11): PostController->renderPartial()
+#3 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(782): PostController->renderPartial()
+#7 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): PostController->render()
+#8 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#14 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#17 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/09 23:36:47 [error] [php] implode(): Invalid arguments passed (C:\OpenServer\domains\yii\demos\blog\protected\views\post\_view.php:21)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#1 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#2 C:\OpenServer\domains\yii\demos\blog\protected\views\post\view.php(11): PostController->renderPartial()
+#3 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(869): PostController->renderFile()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(782): PostController->renderPartial()
+#7 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): PostController->render()
+#8 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#14 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#17 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/09 23:36:54 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#1 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(10): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): CController->render('index', Array)
+#9 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:36:55 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#1 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(10): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): CController->render('index', Array)
+#9 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:37:06 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#1 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(10): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): CController->render('index', Array)
+#9 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:37:10 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#1 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(10): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): CController->render('index', Array)
+#9 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:37:47 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#1 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(10): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): CController->render('index', Array)
+#9 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:38:06 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\OpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#1 C:\OpenServer\domains\yii\framework\web\CBaseController.php(147): CListView->init()
+#2 C:\OpenServer\domains\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\views\post\index.php(10): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\OpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\OpenServer\\d...', Array, true)
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\OpenServer\\d...', Array, true)
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(168): CController->render('index', Array)
+#9 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:41:10 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(192): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(209): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:42:35 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(193): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(211): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:42:47 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('level')
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(596): CActiveRecord->__get('level')
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(213): CModel->offsetGet('level')
+#3 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:43:46 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:43:58 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:44:06 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:44:36 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:44:44 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:44:50 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:45:05 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:45:06 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:45:10 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:45:18 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:45:23 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(194): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(212): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/
+---
+2015/11/09 23:50:22 [error] [php] mysql_real_escape_string(): Access denied for user ''@'localhost' (using password: NO) (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:128)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/09 23:57:21 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(195): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(213): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/blog/
+---
+2015/11/09 23:58:14 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(195): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(213): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/09 23:58:52 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(195): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(213): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/09 23:59:43 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('level')
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(596): CActiveRecord->__get('level')
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(215): CModel->offsetGet('level')
+#3 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/10 00:00:44 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('level')
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(596): CActiveRecord->__get('level')
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(215): CModel->offsetGet('level')
+#3 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/10 00:02:01 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(195): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(214): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/10 00:02:02 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(195): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(214): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/10 00:02:11 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(195): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(214): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/10 00:02:12 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(195): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(214): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/10 06:29:41 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(196): CModel->offsetSet('level', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(216): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/10 06:30:36 [error] [exception.CException] exception 'CException' with message 'Property "Comment.leve2222l" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('leve2222l', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('leve2222l', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(196): CModel->offsetSet('leve2222l', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(217): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/10 06:32:03 [error] [exception.CException] exception 'CException' with message 'Property "Comment.leve2222l" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('leve2222l', 0)
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(607): CActiveRecord->__set('leve2222l', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(196): CModel->offsetSet('leve2222l', 0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(217): crazysort(Array)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+---
+2015/11/10 06:36:12 [error] [php] array_push() expects parameter 1 to be array, object given (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:196)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#1 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#3 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#10 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 06:37:31 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(197): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(217): crazysort(Array)
+#3 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/blog/
+---
+2015/11/10 06:38:51 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(197): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(217): crazysort(Array)
+#3 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/blog/
+---
+2015/11/10 06:39:01 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(197): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(217): crazysort(Array)
+#3 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/blog/
+---
+2015/11/10 06:39:08 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(197): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(217): crazysort(Array)
+#3 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/blog/
+---
+2015/11/10 06:43:57 [error] [exception.CException] exception 'CException' with message 'Property "Comment.level" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('level', 0)
+#1 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(197): CActiveRecord->__set('level', 0)
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(217): crazysort(Array)
+#3 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#4 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/blog/
+---
+2015/11/10 08:27:29 [error] [php] Object of class Comment could not be converted to string (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:221)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 08:28:02 [error] [php] Object of class Comment could not be converted to string (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:221)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 08:35:07 [error] [php] Object of class Comment could not be converted to string (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:216)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:06:21 [error] [php] Illegal string offset 'level' (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:236)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:07:13 [error] [php] Illegal string offset 'level' (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:236)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:07:22 [error] [php] Illegal string offset 'id' (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:236)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:08:59 [error] [php] Illegal string offset 'level' (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:236)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:09:39 [error] [php] Illegal string offset 'id' (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:236)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:09:46 [error] [php] Illegal string offset 'name' (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:237)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:10:07 [error] [php] Illegal string offset 'id' (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:238)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:11:52 [error] [php] Illegal string offset 'id' (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:236)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:13:20 [error] [php] Object of class Comment could not be converted to string (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:236)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 09:18:45 [error] [exception.CException] exception 'CException' with message 'Property "Comment.0" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('0')
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(596): CActiveRecord->__get('0')
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(237): CModel->offsetGet(0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(250): create_tree(Array, 0)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/blog/
+---
+2015/11/10 09:22:29 [error] [exception.CException] exception 'CException' with message 'Property "Comment.0" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('0')
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(596): CActiveRecord->__get('0')
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(237): CModel->offsetGet(0)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(250): create_tree(Array, 0)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/blog/
+---
+2015/11/10 09:22:38 [error] [exception.CException] exception 'CException' with message 'Property "Comment.1" is not defined.' in C:\OpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('1')
+#1 C:\OpenServer\domains\yii\framework\base\CModel.php(596): CActiveRecord->__get('1')
+#2 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(237): CModel->offsetGet(1)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(250): create_tree(Array, 1)
+#4 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#5 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#17 {main}
+REQUEST_URI=/demos/blog/
+HTTP_REFERER=http://yii/demos/blog/
+---
+2015/11/10 09:51:55 [error] [php] Missing argument 2 for crazysort(), called in C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php on line 217 and defined (C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php:183)
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#2 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#5 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\OpenServer\domains\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#8 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): PostController->run()
+#9 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\yii\demos\blog\index.php(11): CWebApplication->run()
+REQUEST_URI=/demos/blog/
+2015/11/10 12:16:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'padrent_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `les_comments` `t` WHERE  padrent_id=0 LIMIT 5 OFFSET 5.
+2015/11/10 12:16:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'padrent_id' in 'where clause'' in C:\OpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\OpenServer\domains\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\OpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\OpenServer\domains\yii\demos\blog\protected\models\Comment.php(53): CActiveRecord->findAll(Array)
+#4 C:\OpenServer\domains\yii\demos\blog\protected\controllers\PostController.php(191): Comment->findPageComments(5, 5)
+#5 C:\OpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#6 C:\OpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\OpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\OpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\OpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\OpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\OpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\OpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\OpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#16 C:\OpenServer\domains\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\OpenServer\domains\yii\demos\blog\index.php(11): CApplication->run()
+#18 {main}
+REQUEST_URI=/demos/blog/?page=2
+HTTP_REFERER=http://yii/demos/blog/?page=1
+---

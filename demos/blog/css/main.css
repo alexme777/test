@@ -1,0 +1,32 @@
+html,body{background-color:#C9CCCD;color:#000000;height:100%;font:normal 14px/20px arial}
+
+.clear{clear:both}
+#content{width:910px;margin:0 auto;}
+.comments-all{font-size:12px;background-color:#E4E6E6; background-image:url('/images/h-rule.gif');background-repeat:no-repeat;margin-top:30px;margin-bottom:20px;padding:10px 20px; height:20px}
+.add-comment{border-bottom:1px dashed #000; cursor:pointer; float:right}
+.sort-elements{border-bottom:1px dashed #000; cursor:pointer;}
+.comment-title{font-size:12px; background-color:#EAEBEB; margin-top:20px; padding:5px 20px;height:20px}
+.comment-message{font-size:12px; background-color:#F1F2F2; padding:5px 20px}
+
+.comment{padding:40px 50px}
+.editor{display:none; margin-top:1px;padding-top:20px; padding-left:20px;background-color:#F3F5F5}
+.comment-ans{float:right; border-bottom:1px dashed #444; cursor:pointer}
+#uname{font-size:16px; font-weight:bold;padding:5px;margin:10px 10px 10px 0} 
+#submit{padding:10px;margin:15px 0;font-weight:bold}
+
+#n_paginator ul {
+    display: block;
+    padding: 0;
+    margin: 0px;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+}
+#n_paginator ul li {
+    list-style: none;
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0 0.5% 2% 0.5%;
+}
