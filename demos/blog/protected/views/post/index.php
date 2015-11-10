@@ -7,7 +7,7 @@ echo $comments;
 
 
 </div>
-<center><a href='?op=clear-all'>очистить все комменты</a></center>
+<!--<center><a href='?op=clear-all'>очистить все комменты</a></center>-->
 <?
       // Проверяем нужны ли стрелки назад
     $pervpage = false;
